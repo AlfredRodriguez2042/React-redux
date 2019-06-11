@@ -15,21 +15,21 @@ const signOut = ()=>{
 
 
    return(
-    <nav>
-        <ul>
-         <li> <Link to="/">HOME</Link> </li>
+    <nav className="main_menu">
+        <ul className="menu_left">
+         <li className="menu_item"> <Link to="/">HOME</Link> </li>
          { props.isAuth
          ?<>
-         <li><Link to="/about">ABOUT</Link></li>            <li><Link to="/chapters">CHAPTERS</Link></li>
-          <li><Link to="/contact">CONTACT</Link></li>
+         <li className="menu_item"><Link to="/about">ABOUT</Link></li>            <li className="menu_item"><Link to="/chapters">CHAPTERS</Link></li>
+          <li className="menu_item"><Link to="/contact">CONTACT</Link></li>
          </>
          :null}
         </ul>
-        <ul>
+        <ul className="menu_right">
             { !props.isAuth
             ? <>
-            <li><Link to="/singup">REGISTER</Link> </li>
-            <li><Link to="/login">LOGIN</Link> </li>
+            <li className="menu_item"><Link to="/singup">REGISTER</Link> </li>
+            <li className="menu_item"><Link to="/login">LOGIN</Link> </li>
             </>
             :<li><Link to="/signout" onClick={signOut}>LOGOUT</Link> </li>}
         </ul>

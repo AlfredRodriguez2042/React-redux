@@ -5,7 +5,7 @@ import Menu from './Menu'
 
 
 const Header = ()=>(
-    <header className="App-header">
+    <header className="header">
     <img src={logo} className="App-logo" alt="logo" />
     <Menu/>
     </header>
